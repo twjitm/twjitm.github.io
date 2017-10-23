@@ -1,0 +1,99 @@
+﻿h1{margin: 0px;}
+.user-content-header{width: 100%;height: 66px;background: #fff;box-shadow: 0px 3px 4px 0px rgba(0,0,0,.5);padding: 0 25px;padding-top: 15px;}
+.user-content-header .cbtn{width: 83px;height: 35px;line-height: 35px;font-size: 14px;color: #545454;background: #e8e8e8 url(../images/zxbj/zx_index_sp.png) no-repeat 9px -5384px;border-radius: 4px;display: inline-block;padding-left: 38px;}
+.user-content-header .cbtn.td{background-position: 9px -5384px;margin-right: 10px;}
+.user-content-header .cbtn.sz{background-position: 9px -5503px;}
+.user-content-header .cbtn:hover{background-color: #afafaf;color: #fff;}
+.user-content-header .cbtn.td:hover{background-position: -96px -5384px;}
+.user-content-header .cbtn.xz{background-position: -96px -5447px;background-color: #00c091;color: #fff;}
+.user-content-header .cbtn.xz:hover{background-color: #11d6a6;}
+.user-content-header .cbtn.sz:hover{background-position: -95px -5504px;}
+.user-content-header p{color:#464646;width: 90px;background: url(../images/zxbj/zx_index_sp.png) no-repeat 10px -5562px;padding-left: 30px;position: absolute;left: 50%;margin-left: -45px;top: 22px;}
+a.cbtn.create_wap{width: 132px;height: 35px;line-height: 35px;font-size: 14px;color: #545454;background: #e8e8e8 url(../images/zxbj/zx_index_sp.png) no-repeat 9px -5315px;border-radius: 4px;display: inline-block; padding-left: 38px; margin-left: 15px;}
+.no_edit_background {position: absolute;width: 100%;height: 100%;background: transparent;z-index: 999;}
+/**vip会员*/
+.zx-vip-box{background: #fff;}
+.zx-vip-modal{width: 100%;height: 100%;background:#fff;position:fixed;top: 0px;left:0px;z-index: 1003;font-size: 100%;display:none;overflow-y: auto !important;}
+.zx-vip-modal .closeBtn{position: fixed;width: 66px;cursor: pointer;height: 66px;top: 10px;right: 10px;background: url(../images/zxbj/close.png)no-repeat;}
+.zx-vip-modal .closeBtn:hover{opacity: .8;}
+.zx-vip-modal .innerr{width: 1240px;margin: 0 auto;}
+.vip-con{border: 1px solid #E5E5E5;border-radius: 8px;margin-top: 48px;}
+.vip-con .vip-title,.vip-con .vip-main{float: left;}
+.vip-con .vip-title{width: 392px;}
+.vip-con .vip-title .csr{width: 100%;height:306px;padding: 30px 0;text-align: center;box-sizing: border-box;}
+.vip-con .vip-title .csr img{width: 100px;height: 100px;display: inline-block;border-radius: 50%;}
+.vip-con .vip-title .csr p{color: #868686;font-size: 14px;}
+.vip-con .vip-title .csr .name{font-size: 18px;color: #00C091;margin-top: 10px;}
+.vip-con .vip-title .csr .job{color:#2b2b2b;margin-bottom: 15px;}
+.vip-con .vip-title .title{width: 100%;height: 48px;line-height:48px;text-align:center;display: inline-block;font-size: 16px;background: #e5e5e5;color: #2d2d2d;}
+.vip-con .vip-title .title:nth-child(2n-1){background: #fff;}
+.vip-con .vip-title .tips {position: relative;cursor: pointer;top: 5px;display: inline-block;width: 30px;height: 30px;background: url(../../images/member/zx-vi-sp.png) no-repeat 0px -30px;}
+.vip-con .vip-title .tips-con-tri{width: 30px;height: 30px;top: 14px;left: 24px;position: absolute;background: url(../../images/member/zx_vip_tip.jpg) no-repeat 0px 0px;z-index: 2;display: none;}
+.vip-con .vip-title .tips-con{position: absolute;background: #fff;width: 167px;height: 200px;border: 1px solid #d8d8d8;border-radius: 4px;line-height:24px;color: #8c8c8c;font-size: 12px;overflow: hidden;left: 30px;top: -163px;display: none;}
+.vip-con .vip-title .tips-con h4{width: 100%;height: 33px;line-height: 33px;font-weight: normal;font-size: 14px;color: #fff;background: #00C091;margin-bottom: 10px;}
+.vip-con .vip-title .tips-con a{color: #00C091;}
+.vip-con .vip-title .tips-con a:hover{text-decoration: underline;}
+.vip-con .vip-title .tips-con p{color: #4A4A4A;padding-top: 10px;}
+.vip-con .vip-title .tips:hover .tips-con,.vip-con .vip-title .tips:hover .tips-con-tri{display: block;}
+.vip-con .vip-title i{width: 30px;height: 20px;top: 8px;display: inline-block;position: relative;background: url(../../images/member/zx-vi-sp.png) no-repeat 0px 0px;}
+
+.vip-con .vip-main{width: 280px;margin-right: 3px;transition:all 0.3s;}
+.vip-con .vip-main:last-child{margin-right: 0px;}
+.vip-con .vip-main .vip-main-hd{width: 100%;height: 306px;background: #FAFAFA url(../../images/member/zx_vip_title.jpg) no-repeat 0px 0px;text-align: center;color: #585959;font-size: 14px;}
+.vip-con .vip-main .vip-main-hd h3{font-weight: normal;font-size: 24px;color: #fff;padding-top: 30px;height:90px;box-sizing: content-box;}
+.vip-con .vip-main .vip-main-hd p.price{font-size: 40px;font-weight: bold;color: #00C091;margin-bottom: 10px;}
+.vip-con .vip-main .vip-main-hd p.price i{font-size: 18px;font-weight: normal;}
+.vip-con .vip-main .vip-main-hd .a-button{background: #00C091;color: #fff;font-size: 18px;padding: 10px 40px;border-radius: 50px;margin-top: 20px;display: inline-block;}
+.vip-con .vip-main .vip-main-hd .a-button:hover{opacity: 0.8;}
+.vip-con .vip-main span{width: 100%;float: left;height: 48px;line-height:48px;text-align:center;display: inline-block;font-size: 14px;background: #f4f4f4;color: #2d2d2d;}
+.vip-con .vip-main span:nth-child(2n-1){background: #fff;}
+.vip-con .vip-main span .gou{width: 40px;height: 40px;display:block;margin: 0 auto;background: url(../../images/member/zx-vi-sp.png) no-repeat 9px -72px;}
+.vip-con .vip-main span .cha{width: 40px;height: 40px;display:block;margin: 0 auto;background: url(../../images/member/zx-vi-sp.png) no-repeat 9px -127px;}
+
+.zx-vip-modal .hd{width: 100%;height: 80px;line-height: 80px;font-size: 18px;background: #F7F7F7;color: #949494;margin: 46px 0 0 0;text-align: center;}
+.zx-vip-modal .hd i{color: #00C091;font-weight: bold;font-style: normal;}
+.zx-vip-modal .bd{width: 1240px;margin: 0 auto;padding-top: 80px;padding-bottom: 50px;height: 100%;}
+.zx-vip-modal .bd ul li{float: left;width: 412px;margin-bottom: 35px;min-height: 86px;}
+.zx-vip-modal .bd ul li .inner{float: left;width: 310px;}
+.zx-vip-modal .bd ul li:nth-child(3n+2) .inner{padding-left: 70px;width: 370px;}
+.zx-vip-modal .bd ul li:nth-child(3n) .inner{float: right;}
+.zx-vip-modal .bd h1{font-size: 24px;width: 97px;margin: 0 auto;color: #2F2F2F;font-weight: normal;margin-bottom: 50px;height: 40px;border-bottom: 3px solid #00C091;}
+.zx-vip-modal .bd h3{font-weight: normal;font-size: 16px;color: #010101;margin-bottom: 15px;}
+.zx-vip-modal .bd p{font-size: 14px;color: #999;}
+
+
+.sjvipModal{position: fixed;width: 100%;height:100%;display: none;top: 0px;left: 0px;overflow: hidden;background: rgba(16, 121, 95, 0.6);}
+.sjvipModal .modal-dialog{width: 520px;height: 290px;font-size: 14px;background:#fff url(../../images/member/vipsj.jpg) no-repeat center 36px;position: fixed;top: 50%;left: 50%;margin-top: -145px;margin-left: -260px;border-radius: 4px;}
+.sjvipModal .modal-dialog p{color: #717171;text-align: center;margin:170px 0 35px 0;}
+.sjvipModal .modal-dialog p i{color: #00C091;}
+.sjvipModal .modal-dialog div.button{text-align: center;}
+.sjvipModal .modal-dialog a{background: #E8E8E8;color: #919191;border-radius: 4px;padding: 5px 8px;display: inline-block;margin: 0 10px;}
+.sjvipModal .modal-dialog a.sj{background: #00C091;color: #fff;}
+.sjvipModal .modal-dialog a:hover{opacity: 0.8;}
+
+.modal-backdrop.in{opacity: .6;background: rgb(16, 121, 95);}
+.modal-open{overflow-y: hidden;padding: 0px !important;}
+.modal-content{box-shadow: none;border: none;border-radius: 3px;}
+.modal-dialog{border-radius: 4px;}
+/*支付提示*/
+.payModal .modal-dialog{z-index: 1002;width: 324px;height: 280px;position: absolute;top: 50%;left: 50%;margin-top: -140px;margin-left: -162px;padding: 22px;border-radius: 4px;background:#fff;}
+.payModal .modal-content .title{position: relative;margin-top: 10px}
+.payModal .modal-content .title h2{position: relative;z-index:2;text-align: center;font-size: 18px;font-weight: normal;color: #acacac;margin:0 auto;background: #fff;width: 140px;}
+.payModal .modal-content .title span{position:absolute;z-index:1;height: 1px;width: 100%;background:#d9d9d9;top:12px;left: 0px;}
+.payModal .modal-content .pbtn{padding-top: 50px;}
+.payModal .modal-content .pbtn a{height:54px;line-height:54px;font-size: 16px;margin-bottom: 20px;border-radius: 4px;display: block;color:#fff;background: #3ebf62 url(../images/zxbj/zx_index_sp.png) no-repeat 88px -1541px;padding-left: 123px;}
+.payModal .modal-content .pbtn a.zfb{background-color:#01a1ec;background-position:88px -1616px;}
+.payModal .modal-content .pbtn a.zfb:hover{background-color:#10aaf2;}
+.payModal .modal-content .pbtn a.zfb:active{background-color:#1090cc;}
+.payModal .modal-content .pbtn a.wx:hover{background-color:#48cb6c;}
+.payModal .modal-content .pbtn a.wx:active{background-color:#32ae54;}
+.payModal .modal-tips{z-index: 1002;width: 444px;height: 244px;position: absolute;top: 50%;left: 50%;margin-top: -122px;margin-left: -222px;border-radius: 4px;background:#fff;}
+.payModal .modal-tips h2{padding:0 20px;line-height: 36px;background:#00c091;font-weight: normal;color: #fff;border-top-left-radius:4px;border-top-right-radius:4px;}
+.payModal .modal-tips p{margin:40px 28px 25px 0;color:#9a9a9a;background: url(../images/zxbj/zx_index_sp.png) no-repeat 28px -1702px;height: 62px;padding: 7px 0px 0px 102px;line-height: 24px;}
+.payModal .modal-tips .pbtn{padding-left:110px;}
+.payModal .modal-tips .pbtn a{width:124px;height: 34px;line-height: 33px;display: inline-block;margin-right:15px;border-radius:4px;border:1px solid #ff4500;background:#ff4500;color:#fff;text-align: center;}
+.payModal .modal-tips .pbtn a.no{border-color:#ddd;color:#4a4a4a;background:#f5f5f5;}
+.payModal .modal-tips .pbtn a.no:hover{opacity:.8;}
+.payModal .modal-tips .pbtn a.yes:hover{border-color:#c33905;color:#fff;background:#fc571a;}
+.payModal .modal-tips .pbtn a.yes:active{border-color:#c33905;color:#752000;background:#e34f18;}
+.payModal .modal-tips .pbtn a.no:active{border-color:#2b9f4b;color:#195A2B;background:#3EBD62;}
