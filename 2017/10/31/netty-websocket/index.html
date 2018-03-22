@@ -18,7 +18,7 @@
 <meta property="og:image" content="http://yoursite.com/img/多线程模型.png">
 <meta property="og:image" content="http://yoursite.com/img/主从多线程.png">
 <meta property="og:image" content="http://yoursite.com/img/netty服务器线程模型.png">
-<meta property="og:updated_time" content="2017-11-20T14:29:44.946Z">
+<meta property="og:updated_time" content="2017-12-18T10:32:04.358Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="游戏服务器-netty实现实时数据交互系统。">
 <meta name="twitter:description" content="first post">
@@ -207,19 +207,8 @@
 <li>重新注册到Sub线程池的线程上，用于处理I/O的读写操作。<h3 id="Netty线程模型"><a href="#Netty线程模型" class="headerlink" title="Netty线程模型"></a>Netty线程模型</h3><h4 id="Netty线程模型分类"><a href="#Netty线程模型分类" class="headerlink" title="Netty线程模型分类"></a>Netty线程模型分类</h4></li>
 </ol>
 <p>事实上，Netty的线程模型与1.2章节中介绍的三种Reactor线程模型相似，下面章节我们通过Netty服务端和客户端的线程处理流程图来介绍Netty的线程模型。</p>
-<h5 id="服务端线程模型"><a href="#服务端线程模型" class="headerlink" title="服务端线程模型"></a>服务端线程模型</h5><p>一种比较流行的做法是服务端监听线程和IO线程分离，类似于Reactor的多线程模型，它的工作原理图如下：<br><img src="/img/netty服务器线程模型.png" alt=""><br>对于简单的服务器，netty的工作流程代码如下 </p>
-<pre><code>    package com.twjitm.common;
-    import com.twjitm.common.initalizer.WebsocketChatServerInitializer;
-    import com.twjitm.common.service.ControllerService;
-    import com.twjitm.common.utils.Globals;
-    import io.netty.bootstrap.ServerBootstrap;
-    import io.netty.channel.ChannelFuture;
-    import io.netty.channel.ChannelOption;
-    import io.netty.channel.EventLoopGroup;
-    import io.netty.channel.nio.NioEventLoopGroup;
-    import io.netty.channel.socket.nio.NioServerSocketChannel;
-
-    import java.util.logging.LogManager;
+<h5 id="服务端线程模型"><a href="#服务端线程模型" class="headerlink" title="服务端线程模型"></a>服务端线程模型</h5><p>一种比较流行的做法是服务端监听线程和IO线程分离，类似于Reactor的多线程模型，它的工作原理图如下：<br><img src="/img/netty服务器线程模型.png" alt=""><br>对于简单的服务器，netty的工作流程代码如下<br>`<br>        package com.twjitm.common;<br>        import com.twjitm.common.initalizer.WebsocketChatServerInitializer;<br>        import com.twjitm.common.service.ControllerService;<br>        import com.twjitm.common.utils.Globals;<br>        import io.netty.bootstrap.ServerBootstrap;<br>        import io.netty.channel.ChannelFuture;<br>        import io.netty.channel.ChannelOption;<br>        import io.netty.channel.EventLoopGroup;<br>        import io.netty.channel.nio.NioEventLoopGroup;<br>        import io.netty.channel.socket.nio.NioServerSocketChannel;</p>
+<pre><code>    import java.util.logging.LogManager;
     import java.util.logging.Logger;
 
 /**
@@ -281,8 +270,8 @@
     public static void main(String[] args) {
     RealcomServer.getInItStance().startServer();
     }
-    }        
-</code></pre><p>通常情况下，服务端的创建是在用户进程启动的时候进行，因此一般由Main函数或者启动类负责创建，服务端的创建由业务线程负责完成。在创建服务端的时候实例化了2个EventLoopGroup，1个EventLoopGroup实际就是一个EventLoop线程组，负责管理EventLoop的申请和释放。</p>
+    }   
+</code></pre><p>`<br>通常情况下，服务端的创建是在用户进程启动的时候进行，因此一般由Main函数或者启动类负责创建，服务端的创建由业务线程负责完成。在创建服务端的时候实例化了2个EventLoopGroup，1个EventLoopGroup实际就是一个EventLoop线程组，负责管理EventLoop的申请和释放。</p>
 <p>EventLoopGroup管理的线程数可以通过构造函数设置，如果没有设置，默认取-Dio.netty.eventLoopThreads，如果该系统参数也没有指定，则为可用的CPU内核数 × 2。</p>
 <p>bossGroup线程组实际就是Acceptor线程池，负责处理客户端的TCP连接请求，如果系统只有一个服务端端口需要监听，则建议bossGroup线程组线程数设置为1。</p>
 <p>workerGroup是真正负责I/O读写操作的线程组，通过ServerBootstrap的group方法进行设置，用于后续的Channel绑定。</p>
@@ -480,7 +469,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2017 唐文江
+    		&copy; 2018 唐文江
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten

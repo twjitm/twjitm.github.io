@@ -49,7 +49,7 @@ Acceptor线程接收客户端连接请求之后创建新的SocketChannel，
 一种比较流行的做法是服务端监听线程和IO线程分离，类似于Reactor的多线程模型，它的工作原理图如下：
 ![](/img/netty服务器线程模型.png) 
 对于简单的服务器，netty的工作流程代码如下 
-
+`
         package com.twjitm.common;
         import com.twjitm.common.initalizer.WebsocketChatServerInitializer;
         import com.twjitm.common.service.ControllerService;
@@ -123,7 +123,8 @@ Acceptor线程接收客户端连接请求之后创建新的SocketChannel，
 		public static void main(String[] args) {
         RealcomServer.getInItStance().startServer();
 		}
-        }        
+        }   
+`		
 通常情况下，服务端的创建是在用户进程启动的时候进行，因此一般由Main函数或者启动类负责创建，服务端的创建由业务线程负责完成。在创建服务端的时候实例化了2个EventLoopGroup，1个EventLoopGroup实际就是一个EventLoop线程组，负责管理EventLoop的申请和释放。
 
 EventLoopGroup管理的线程数可以通过构造函数设置，如果没有设置，默认取-Dio.netty.eventLoopThreads，如果该系统参数也没有指定，则为可用的CPU内核数 × 2。
@@ -131,6 +132,7 @@ EventLoopGroup管理的线程数可以通过构造函数设置，如果没有设
 bossGroup线程组实际就是Acceptor线程池，负责处理客户端的TCP连接请求，如果系统只有一个服务端端口需要监听，则建议bossGroup线程组线程数设置为1。
 
 workerGroup是真正负责I/O读写操作的线程组，通过ServerBootstrap的group方法进行设置，用于后续的Channel绑定。
+
 
 
 
